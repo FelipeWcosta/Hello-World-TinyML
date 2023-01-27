@@ -121,4 +121,15 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
   Onde percebe-se um maior erro para os dados de validação *(azul)* do que para os dados de treinamento 
   *(verde)*, o que pode ser caracterizado como *overfitting*. Para solucionar o problema de 
   *overfitting* da nossa rede neural podemos aumentar a base de dados ou modificar a estrutura da nossa 
-  rede, como será feito a seguir.  
+  rede, podemos ver graficamente este problema da nossa rede plotando os valores atuais e os valores 
+  predizidos pela rede.
+
+  ```
+  predictions = model_1.predict(x_train)
+  plt.clf()
+  plt.title('Training data predicted vs actual values')
+  plt.plot(x_test, y_test, 'b.', label='Actual')
+  plt.plot(x_train, predictions, 'r.', label='Predicted')
+  plt.legend()
+  plt.show()
+  ```  
