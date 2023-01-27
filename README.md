@@ -67,6 +67,19 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
                             validation_data=(x_validate, y_validate))
   ```
   Pode-se plotar as perdas para os dados de treinamento e validação:
+  ```
+    loss = history_1.history['loss']
+    val_loss = history_1.history['val_loss']
+    epochs = range(1, len(loss)+1)
+    plt.plot(epochs, loss, 'g.', label='Training Loss')
+    plt.plot(epochs, val_loss, 'b', label='Validation Loss')
+    plt.title('Training and Validation Loss')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.show()
+  ```
+
   ![Training][def4]
 
   [def4]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/training.png
