@@ -1,5 +1,5 @@
 # Hello World TinyML por Pete Warden e Daniel Situnayake 
-## Resolvendo as depêndecias
+## Resolvendo as ddependências
  Primeiramente importamos as bibliotecas e *frameworks* necessários:
  ```
     import tensorflow as tf
@@ -30,3 +30,6 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
     plt.plot(x_values, y_values, 'b.')
     plt.show()
 ```
+![Noise][def]
+
+[def]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/noise.png
