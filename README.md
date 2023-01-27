@@ -311,6 +311,6 @@ A implementação pode ser feita em diversos dispositivos microcontrolados poré
 * `TensorFlowLite.h`, para o `Arduino BLE Sense` onde a instalação é feita por meio de arquivo `.zip`.
 
 ## Referências
-* [Pete_Warden][def13]
+* [WARDEN, Pete; SITUNAYAKE, Daniel. Tinyml: **Machine learning with tensorflow lite on arduino and ultra-low-power microcontrollers**. O'Reilly Media, 2019.][def13]
 
 [def13]: https://www.amazon.com.br/Tinyml-Learning-Tensorflow-Ultra-Low-Power-Microcontrollers/dp/1492052043,  "WARDEN, Pete; SITUNAYAKE, Daniel. Tinyml: **Machine learning with tensorflow lite on arduino and ultra-low-power microcontrollers**. O'Reilly Media, 2019."
