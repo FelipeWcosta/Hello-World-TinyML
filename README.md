@@ -66,3 +66,7 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
     history_1 = model_1.fit(x_train, y_train, epochs=1000, batch_size=16,
                             validation_data=(x_validate, y_validate))
   ```
+  Pode-se plotar as perdas para os dados de treinamento e validação:
+  ![Training][def4]
+
+  [def4] : https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/training.png
