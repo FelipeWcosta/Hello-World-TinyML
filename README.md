@@ -306,9 +306,9 @@ Para printar o modelo em binários:
 !cat sine_model_quantized.cpp
 ```
 ## Implementação
-A implementação pode ser feita em diversos dispositivos microcontrolados porém os mais simples para efetua-lá são o `Arduino BLE Sense` e o `ESP32 DevKitC` utilizando a `Arduino IDE` com a seguintes bibliotecas instaladas:
+A implementação pode ser feita em diversos dispositivos microcontrolados porém os mais simples para efetua-lá são o `Arduino Nano 33 BLE Sense` e o `ESP32 DevKitC` utilizando a `Arduino IDE` com a seguintes bibliotecas instaladas:
 * `TensorFlowLite_ESP32.h`, para o `ESP32 DevKitC` já presente na `Arduino IDE`;
-* `TensorFlowLite.h`, para o `Arduino BLE Sense` onde a instalação é feita por meio de arquivo `.zip`.
+* `TensorFlowLite.h`, para o `AArduino Nano 33 BLE Sense` onde a instalação é feita por meio de arquivo `.zip`.
 
 ## Referências
 * [WARDEN, Pete; SITUNAYAKE, Daniel. Tinyml: **Machine learning with tensorflow lite on arduino and ultra-low-power microcontrollers**. O'Reilly Media, 2019.][def13]
