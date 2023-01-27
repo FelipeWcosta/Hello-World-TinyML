@@ -61,3 +61,8 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
     model_1.add(layers.Dense(1))
     model_1.compile(optimizer='rmsprop', loss='mse', metrics=['mae'])
   ```
+  Para treinar o `modelo_1`:
+  ```
+    history_1 = model_1.fit(x_train, y_train, epochs=1000, batch_size=16,
+                            validation_data=(x_validate, y_validate))
+  ```
