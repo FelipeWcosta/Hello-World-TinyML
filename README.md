@@ -30,6 +30,4 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
     plt.plot(x_values, y_values, 'b.')
     plt.show()
 ```
-![Noise][def]
-
-[def]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/noise.png
+![Noise](https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/noise.png)
