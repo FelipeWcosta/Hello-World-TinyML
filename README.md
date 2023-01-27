@@ -151,3 +151,17 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
     history_2 = model_2.fit(x_train, y_train, epochs=600, batch_size=16,
     validation_data=(x_validate, y_validate))
   ```
+  Plotando as perdas:
+
+  ```
+    loss = history_2.history['loss']
+    val_loss = history_2.history['val_loss']
+    epochs = range(1, len(loss) + 1)
+    plt.plot(epochs, loss, 'g.', label='Training loss')
+    plt.plot(epochs, val_loss, 'b', label='Validation loss')
+    plt.title('Training and validation loss')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.show()
+  ```
