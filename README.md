@@ -295,3 +295,13 @@ Para conveter:
 ```
 !xxd -i sine_model_quantized.tflite > sine_model_quantized.cpp
 ```
+Para printar o modelo em binários:
+```
+!cat sine_model_quantized.cc
+```
+```
+!cat sine_model_quantized.h
+```
+```
+!cat sine_model_quantized.cpp
+```
