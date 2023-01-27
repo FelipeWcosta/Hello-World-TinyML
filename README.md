@@ -100,3 +100,16 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
   ![Zoom][def5]
 
   [def5]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/zoom.png
+
+  Pode-se análisar também o erro médio absoluto `MAE`, como segue:
+  ```
+    mae = history_1.history['mae']
+    val_mae = history_1.history['val_mae']
+    plt.plot(epochs[SKIP:], mae[SKIP:], 'g.', label='Training MAE')
+    plt.plot(epochs[SKIP:], val_mae[SKIP:], 'b.', label='Validation MAE')
+    plt.title('Training and validation mean absolute error')
+    plt.xlabel('Epochs')
+    plt.ylabel('MAE')
+    plt.legend()
+    plt.show()
+  ```
