@@ -78,8 +78,25 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
     plt.ylabel('Loss')
     plt.legend()
     plt.show()
-  ```
+  ``` 
 
   ![Training][def4]
 
   [def4]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/training.png
+
+  Dando um *zoom* na figura anterior percebe-se que não há uma evolução considerável do nosso modelo a   
+  partir da 600ª época:
+
+  ```
+    SKIP = 100
+    plt.plot(epochs[SKIP:], loss[SKIP:], 'g.', label='Training loss')
+    plt.plot(epochs[SKIP:], val_loss[SKIP:], 'b.', label='Validation loss')
+    plt.title('Training and validation loss')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.show()
+  ```
+  ![Zoom][def5]
+
+  [def5]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/zoom.png
