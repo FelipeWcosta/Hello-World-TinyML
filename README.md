@@ -1,2 +1,3 @@
-# Hello World TinyML
- Hello World do TinyML usando um modelo de Machine Learning de uma senóide
+# Hello World TinyML por Pete Warden e Daniel Situnayake 
+## Resolvendo as depêndecias
+ Primeiramente importamos as bibliotecas e *frameworks* necessários:
