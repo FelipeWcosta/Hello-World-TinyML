@@ -113,3 +113,7 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
     plt.legend()
     plt.show()
   ```
+
+  ![MAE][def6]
+
+  [def6]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/MAE.png
