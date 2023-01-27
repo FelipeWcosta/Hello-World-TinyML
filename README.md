@@ -51,3 +51,13 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
  ![Split][def3]
 
  [def3]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/split.png
+
+ ## Modelo básico
+  Agora criaremos o primeiro modelo, com apenas um *layer* para recebimento dos dados e um de saída:
+  ```
+    from keras import layers
+    model_1 = tf.keras.Sequential()
+    model_1.add(layers.Dense(16, activation='relu', input_shape=(1,)))
+    model_1.add(layers.Dense(1))
+    model_1.compile(optimizer='rmsprop', loss='mse', metrics=['mae'])
+  ```
