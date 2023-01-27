@@ -1,5 +1,5 @@
 # Hello World TinyML por Pete Warden e Daniel Situnayake 
-## Resolvendo as ddependências
+## Resolvendo as dependências
  Primeiramente importamos as bibliotecas e *frameworks* necessários:
  ```
     import tensorflow as tf
