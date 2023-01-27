@@ -232,7 +232,7 @@ converter.representative_dataset = representative_dataset_generator
 tflite_model = converter.convert()
 open("sine_model_quantized.tflite", "wb").write(tflite_model)
 ```
-Após a conversão para a extensão `.tflite` precisamos realizar a quantização, que nada mais é do que a mudança de um modelo com operções do tipo `float` de `32 bits` para um modelo quantizado do tipo `int` de `8 bits`. Claramente a precisão é diminuida após a conclusão deste processo porém para dispositivos microcontrolados essa perda é descartável em vista da otimização proporcionada dado que estes dispositivos possuem recursos reduzidos. Uma compração entre os modelos pode ser vista a seguir:
+Após a conversão para a extensão `.tflite` precisamos realizar a quantização, que nada mais é do que a mudança de um modelo com operções do tipo `float` de `32 bits` para um modelo quantizado do tipo `int` de `8 bits`. Claramente a precisão é diminuida após a conclusão deste processo porém para dispositivos microcontrolados essa perda é descartável em vista da otimização proporcionada, dado que estes dispositivos possuem recursos reduzidos. Uma compração entre os modelos pode ser vista a seguir:
 
 ```
 sine_model = tf.lite.Interpreter('sine_model.tflite')
