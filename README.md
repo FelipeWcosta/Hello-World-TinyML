@@ -216,3 +216,51 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
 ![Testing][def11]
 
 [def11]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/testing.png
+
+## Convertendo o modelo para o Tensorflow Lite
+Para converter o modelo criado para o Tensorflow Lite `(.tflite)` utilizamos a seguinte célula:
+```
+converter = tf.lite.TFLiteConverter.from_keras_model(model_2)
+tflite_model = converter.convert()
+open("sine_model.tflite", "wb").write(tflite_model)
+converter = tf.lite.TFLiteConverter.from_keras_model(model_2)
+converter.optimizations = [tf.lite.Optimize.DEFAULT]
+def representative_dataset_generator():
+ for value in x_test:
+  yield [np.array(value, dtype=np.float32, ndmin=2)]
+converter.representative_dataset = representative_dataset_generator
+tflite_model = converter.convert()
+open("sine_model_quantized.tflite", "wb").write(tflite_model)
+```
+Após a conversão para a extensão `.tflite` precisamos realizar a quantização, que nasa mais é do que a mudança de um modelo com operções do tipo `float` de `32 bits` para um modelo quantizado do tipo `int` de `8 bits`. Claramente um parte da precisão é perdida após a conclusão deste processo porém para dispositivos microcontrolados essa perda é descartável em vista da otimização proporcionada dado que estes dispositivos possuem recursos reduzidos. Uma compração entre os modelos pode ser vista a seguir:
+
+```
+sine_model = tf.lite.Interpreter('sine_model.tflite')
+sine_model_quantized = tf.lite.Interpreter('sine_model_quantized.tflite')
+sine_model.allocate_tensors()
+sine_model_quantized.allocate_tensors()
+sine_model_input_index = sine_model.get_input_details()[0]["index"]
+sine_model_output_index = sine_model.get_output_details()[0]["index"]
+sine_model_quantized_input_index = sine_model_quantized.get_input_details()[0]["index"]
+sine_model_quantized_output_index = sine_model_quantized.get_output_details()[0]["index"]
+sine_model_predictions = []
+sine_model_quantized_predictions = []
+for x_value in x_test:
+  x_value_tensor = tf.convert_to_tensor([[x_value]], dtype=np.float32)
+  sine_model.set_tensor(sine_model_input_index, x_value_tensor)
+  sine_model.invoke()
+  sine_model_predictions.append(
+      sine_model.get_tensor(sine_model_output_index)[0])
+  sine_model_quantized.set_tensor(sine_model_quantized_input_index, x_value_tensor)
+  sine_model_quantized.invoke()
+  sine_model_quantized_predictions.append(
+      sine_model_quantized.get_tensor(sine_model_quantized_output_index)[0])
+plt.clf()
+plt.title('Comparison of various models against actual values')
+plt.plot(x_test, y_test, 'bo', label='Actual')
+plt.plot(x_test, predictions, 'ro', label='Original predictions')
+plt.plot(x_test, sine_model_predictions, 'yx', label='Lite predictions')
+plt.plot(x_test, sine_model_quantized_predictions, 'gx', label='Lite quantized predictions')
+plt.legend()
+plt.show()
+```
