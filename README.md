@@ -24,4 +24,9 @@
 
 [def]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/sine.png
 
-Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos números randômicos toda vez que for executado novamente podendo ser utilizado qualquer valor.
+Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos números randômicos toda vez que for executado novamente podendo ser utilizado qualquer valor para `SEED`. Agora adiciona-se ruído na senóide:
+```
+    y_values += 0.1*np.random.randn(*y_values.shape)
+    plt.plot(x_values, y_values, 'b.')
+    plt.show()
+```
