@@ -279,7 +279,19 @@ difference = basic_model_size - quantized_model_size
 print("Difference is %d bytes" % difference)
 ```
 ## Converter para um arquivo .cc
-Agora precisamos converter o arquivo `.tflite` para uma extensão de arquivo que os microcontroladores sejam capazes de rodar como `.cc`, `.cpp`, `.h`, etc. Para isso precisamos do pacote `xxd` que também está dísponivel para o Linux:
+Agora precisamos converter o arquivo `.tflite` para uma extensão de arquivo que os microcontroladores sejam capazes de rodar como `.cc`, `.cpp`, `.h`, etc. Para isso precisamos do pacote `xxd` que também está disponível para o Linux:
 ```
 !apt-get update && apt-get -qq install xxd
+```
+Para conveter:
+```
+!xxd -i sine_model_quantized.tflite > sine_model_quantized.cc
+```
+
+```
+!xxd -i sine_model_quantized.tflite > sine_model_quantized.h
+```
+
+```
+!xxd -i sine_model_quantized.tflite > sine_model_quantized.cpp
 ```
