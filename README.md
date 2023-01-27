@@ -121,7 +121,7 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
   Onde percebe-se um maior erro para os dados de validação *(azul)* do que para os dados de treinamento 
   *(verde)*, o que pode ser caracterizado como *overfitting*. Para solucionar o problema de 
   *overfitting* da nossa rede neural podemos aumentar a base de dados ou modificar a estrutura da nossa 
-  rede, podemos ver graficamente este problema da nossa rede plotando os valores atuais e os valores 
+  rede, podemos ver graficamente este problema da rede neural plotando os valores atuais e os valores 
   predizidos pela rede.
 
   ```
