@@ -267,3 +267,14 @@ plt.show()
 ![Quantized][def12]
 
 [def12]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/quantized.png
+
+Terminado o processo podemos ver o tamanho do modelo com a seguinte célula:
+```
+import os
+basic_model_size = os.path.getsize("sine_model.tflite")
+print("Basic model is %d bytes" % basic_model_size)
+quantized_model_size = os.path.getsize("sine_model_quantized.tflite")
+print("Quantized model is %d bytes" % quantized_model_size)
+difference = basic_model_size - quantized_model_size
+print("Difference is %d bytes" % difference)
+```
