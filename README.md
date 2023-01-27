@@ -201,3 +201,15 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
   ![MAE2][def10]
 
   [def10]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/MAE2.png
+
+  Sendo possível perceber uma diminuição consideravel no **MAE** em comparação com o modelo básico implicando que a estratégia de modificar a estrutura da rede neural funcionou, como pode-se ver no plot dos valores atuais e os predizidos pela nova rede:
+  ```
+  loss = model_2.evaluate(x_test, y_test)
+  predictions = model_2.predict(x_test)
+  plt.clf()
+  plt.title('Comparison of predictions and actual values')
+  plt.plot(x_test, y_test, 'b.', label='Actual')
+  plt.plot(x_test, predictions, 'r.', label='Predicted')
+  plt.legend()
+  plt.show()
+```
