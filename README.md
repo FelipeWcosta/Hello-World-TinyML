@@ -313,4 +313,4 @@ A implementação pode ser feita em diversos dispositivos microcontrolados poré
 ## Referências
 * [WARDEN, Pete; SITUNAYAKE, Daniel. Tinyml: **Machine learning with tensorflow lite on arduino and ultra-low-power microcontrollers**. O'Reilly Media, 2019.][def13]
 
-[def13]: https://www.amazon.com.br/Tinyml-Learning-Tensorflow-Ultra-Low-Power-Microcontrollers/dp/1492052043,  "WARDEN, Pete; SITUNAYAKE, Daniel. Tinyml: Machine learning with tensorflow lite on arduino and ultra-low-power microcontrollers. O'Reilly Media, 2019."
+[def13]: https://books.google.com.br/books?hl=pt-BR&lr=&id=tn3EDwAAQBAJ&oi=fnd&pg=PP1&dq=Machine+Learning+with+TensorFlow+Lite+on+Arduino+and+Ultra-Low-Power+Microcontrollers&ots=jpslgo19w-&sig=Qf6byoNvC_xl1U46e9iCbex_EXQ#v=onepage&q=Machine%20Learning%20with%20TensorFlow%20Lite%20on%20Arduino%20and%20Ultra-Low-Power%20Microcontrollers&f=false,  "WARDEN, Pete; SITUNAYAKE, Daniel. Tinyml: Machine learning with tensorflow lite on arduino and ultra-low-power microcontrollers. O'Reilly Media, 2019."
