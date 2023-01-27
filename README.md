@@ -264,3 +264,6 @@ plt.plot(x_test, sine_model_quantized_predictions, 'gx', label='Lite quantized p
 plt.legend()
 plt.show()
 ```
+![Quantized][def12]
+
+[def12]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/quantized.png
