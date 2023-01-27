@@ -138,7 +138,7 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
   [def7]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/predicted.png
 
   ## Melhorando e treinando o nosso modelo
-  Agora ao invés de usarmos somente dois *layers* iremos utilizar três aumentando a quantidade de parâmetros de 49 para 321 aumentado subtancialmente a capacidade da nossa rede neural.
+  Agora ao invés de usarmos somente dois *layers* iremos utilizar três aumentando a quantidade de parâmetros de 49 para 321 aumentado substancialmente a capacidade da nossa rede neural.
   ```
     model_2 = tf.keras.Sequential()
     model_2.add(layers.Dense(16, activation='relu', input_shape=(1,)))
