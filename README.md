@@ -146,3 +146,8 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
     model_2.add(layers.Dense(1))
     model_2.compile(optimizer='rmsprop', loss='mse', metrics=['mae'])
   ```
+  Treinando a rede neural:
+  ```
+    history_2 = model_2.fit(x_train, y_train, epochs=600, batch_size=16,
+    validation_data=(x_validate, y_validate))
+  ```
