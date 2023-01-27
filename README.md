@@ -48,3 +48,6 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
     plt.legend()
     plt.show()
  ```
+ ![Split][def3]
+
+ [def3]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/split.png
