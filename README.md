@@ -117,3 +117,8 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
   ![MAE][def6]
 
   [def6]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/MAE.png
+
+  Onde percebe-se um maior erro para os dados de validação *(azul)* do que para os dados de treinamento 
+  *(verde)*, o que pode ser caracterizado como *overfitting*. Para solucionar o problema de 
+  *overfitting* da nossa rede neural podemos aumentar a base de dados ou modificar a estrutura da nossa 
+  rede, como será feito a seguir.  
