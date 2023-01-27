@@ -20,4 +20,6 @@
     plt.plot(x_values, y_values, 'b.')
     plt.show()
  ```
- ![Função Senóide](https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/sine.png)
+ ![FunctSine][def]
+
+[def]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/sine.png
