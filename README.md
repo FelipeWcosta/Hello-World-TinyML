@@ -168,3 +168,16 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
   ![Loss][def8]
 
   [def8]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/loss.png
+
+  Aplicando um *zoom* na figura anterior:
+  ```
+    SKIP = 100
+    plt.clf()
+    plt.plot(epochs[SKIP:], loss[SKIP:], 'g.', label='Training loss')
+    plt.plot(epochs[SKIP:], val_loss[SKIP:], 'b.', label='Validation loss')
+    plt.title('Training and validation loss')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.show()
+  ```
