@@ -85,7 +85,7 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
   [def4]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/training.png
 
   Dando um *zoom* na figura anterior percebe-se que não há uma evolução considerável do nosso modelo a   
-  partir da 600ª época:
+  partir da 600ª época além de perdas considerávelmente elevadas:
 
   ```
     SKIP = 100
