@@ -123,7 +123,7 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
   *(verde)*, o que pode ser caracterizado como *overfitting*. Para solucionar o problema de 
   *overfitting* da nossa rede neural podemos aumentar a base de dados ou modificar a estrutura da 
   rede, podemos ver graficamente este problema da rede neural plotando os valores atuais e os valores 
-  predizidos pela rede.
+  predizidos pela ela.
 
   ```
   predictions = model_1.predict(x_train)
