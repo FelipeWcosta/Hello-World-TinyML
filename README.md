@@ -121,7 +121,7 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
 
   Onde percebe-se um maior erro para os dados de validação *(azul)* do que para os dados de treinamento 
   *(verde)*, o que pode ser caracterizado como *overfitting*. Para solucionar o problema de 
-  *overfitting* da nossa rede neural podemos aumentar a base de dados ou modificar a estrutura da 
+  *overfitting* de uma rede neural podemos aumentar a base de dados ou modificar a estrutura da 
   rede, podemos ver graficamente este problema da rede neural plotando os valores atuais e os valores 
   predizidos pela ela.
 
@@ -139,7 +139,7 @@ Onde `SAMPLES = 1000` é o número de amostras e `SEED = 1337` seta os mesmos n�
   [def7]: https://github.com/FelipeWcosta/Hello-World-TinyML/blob/main/Figs/predicted.png
 
   ## Melhorando e treinando o nosso modelo
-  Agora ao invés de usarmos somente dois *layers* iremos utilizar três aumentando a quantidade de parâmetros de 49 para 321 aumentado substancialmente a capacidade da nossa rede neural.
+  Agora ao invés de usarmos somente dois *layers* iremos utilizar três aumentando a quantidade de parâmetros de 49 para 321 elevando substancialmente a capacidade da nossa rede neural.
   ```
     model_2 = tf.keras.Sequential()
     model_2.add(layers.Dense(16, activation='relu', input_shape=(1,)))
